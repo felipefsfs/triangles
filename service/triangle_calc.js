@@ -1,4 +1,7 @@
+const INVALID_MESSAGE = "invalid triangle values";
+
 export {
+    INVALID_MESSAGE,
     resolve_triangle,
     is_triangle,
     triangle_type
@@ -6,7 +9,7 @@ export {
 
 function resolve_triangle(a, b, c) {
     if (!is_triangle(a,b,c)) {
-        throw new Error("invalid triangle values");
+        throw new Error(INVALID_MESSAGE);
     }
     return triangle_type(a, b, c);
 }
