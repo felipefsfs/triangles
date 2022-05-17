@@ -1,19 +1,14 @@
-version: 0.2
-phases:
-  install:
-    runtime-versions:
-      nodejs: 18
-    commands:
-      - echo Installing
-      - ~/script.sh
-  pre_build:
-    commands:
-      - echo Installing source NPM dependencies.
-      - npm install
-  build:
-    commands:
-      - echo Running Prod
-      - npm run prod
-artifacts:
-  files:
-    - '**/*'
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /triangles
+hooks:
+  BeforeInstall:
+    - location: scripts/install.sh
+      timeout: 3000
+      runas: root
+  ApplicationStart:
+    - location: scripts/start.sh
+      timeout: 3000
+      runas: root
