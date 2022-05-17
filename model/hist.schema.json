@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://github.com/felipefsfs/triangles/model/hist.schema.json",
+    "title": "Hist",
+    "description": "Historical data",
+    "type": "object",
+    "properties": {
+        "timestamp_ts": {
+            "description": "Unix Timestamp",
+            "type": "integer"
+        },
+        "result_type": {
+            "description": "scalene, isosceles or equilateral",
+            "type": "string"
+        },
+        "lengths": {
+            "description": "Sides of the triangle calculated",
+            "type": "array",
+            "items": {
+                "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+        }
+    },
+    "required": [ "timestamp_ts", "result_type", "lengths" ]
+}

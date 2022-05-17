@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://github.com/felipefsfs/triangles/model/result.schema.json",
+    "title": "Result",
+    "description": "Result of the calculation",
+    "type": "object",
+    "properties": {
+        "result": {
+            "description": "scalene, isosceles or equilateral",
+            "type": "string"
+        }
+    },
+    "required": [ "result" ]
+}

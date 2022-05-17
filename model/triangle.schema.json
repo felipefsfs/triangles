@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://github.com/felipefsfs/triangles/model/triangle.schema.json",
+    "title": "Input",
+    "description": "Triangle lengths",
+    "type": "object",
+    "properties": {
+        "length1": {
+            "description": "Length of 1 side (A) of the triangle",
+            "type": "number"
+        },
+        "length2": {
+            "description": "Length of 1 side (B) of the triangle",
+            "type": "number"
+        },
+        "length3": {
+            "description": "Length of 1 side (C) of the triangle",
+            "type": "number"
+        }
+    },
+    "required": [ "length1", "length2", "length3" ]
+}

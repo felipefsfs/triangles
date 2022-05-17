@@ -9,7 +9,6 @@
     "test0": "mocha -f Service --exit",
     "test1": "mocha -f Routes --exit",
     "start": "nodemon .",
-    "db": "nodemon ./model/index.js",
     "prod": "node ."
   },
   "repository": {
