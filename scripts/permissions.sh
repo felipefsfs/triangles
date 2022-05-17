@@ -1,5 +1,4 @@
 #!/bin/bash
 source ~/.bashrc
 cd /triangles
-nvm use --lts
-npm install
+chown ec2-user:ec2-user -R .

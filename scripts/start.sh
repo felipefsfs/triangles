@@ -1,2 +1,5 @@
 #!/bin/bash
-npm run prod
+source ~/.bashrc
+cd /triangles
+nvm use --lts
+npm run prod > /tmp/tlog 2>&1 &

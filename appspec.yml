@@ -4,11 +4,18 @@ files:
   - source: /
     destination: /triangles
 hooks:
-  BeforeInstall:
+  AfterInstall:
+    - location: scripts/permissions.sh
+      timeout: 300
+      runas: root
     - location: scripts/install.sh
-      timeout: 3000
-      runas: ec2-user
+      timeout: 900
+      runas: ec2-user 
   ApplicationStart:
     - location: scripts/start.sh
-      timeout: 3000
+      timeout: 300
+      runas: ec2-user
+  ApplicationStop:
+    - location: scripts/stop.sh
+      timeout: 300
       runas: ec2-user
