@@ -16,7 +16,7 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', express.json(), async (req, res, next) => {
     try {
-        const { length1, length2, length3 } = req.body;
+        const { length1 = 0, length2 = 0, length3 = 0 } = req.body;
         const result = resolve_triangle(length1, length2, length3);
         await add([length1, length2, length3], result);
         res.send({ result });
