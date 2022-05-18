@@ -45,7 +45,7 @@ It will return the History of previous calculations performed by the API, each c
   "required": [ "timestamp_ts", "result_type", "lengths" ]
 }
 ```
-![GET VSCODE](/media/get.PNG)
+![GET VSCODE](/media/get.png)
 
 #### POST /
 It will calculate the type of triangle based on the sides passed as the application/json body:
@@ -92,11 +92,11 @@ This should be the response for a valid body:
 }
 ```
 
-![POST VSCODE](/media/post.PNG)
+![POST VSCODE](/media/post.png)
 
 
-![METHOD](/media/method.PNG)
-![RATE](/media/rate.PNG)
+![METHOD](/media/method.png)
+![RATE](/media/rate.png)
 
 ### Running locally
 Must setup environment variables: AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY, for Dynamo DB connection
